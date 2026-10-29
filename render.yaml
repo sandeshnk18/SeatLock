@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: seatlock-ai
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/v1/admin/health
+    envVars:
+      - key: NODE_ENV
+        value: production

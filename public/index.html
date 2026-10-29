@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6f2"><meta name="description" content="Real seats. Real fans. Book your next live moment with SeatLock.">
+  <title>SeatLock® — Real seats. Real fans.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/account.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="site-header">
+      <a class="wordmark" href="#discover" aria-label="SeatLock home">seatlock<span>®</span></a>
+      <div class="header-tools"><span class="header-note">LESS HOARDING. MORE LIVING.</span><a class="account-link" href="/access.html">Sign in</a><button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark theme" title="Switch to dark theme"><span aria-hidden="true">◐</span></button></div>
+    </header>
+    <section id="masthead" class="masthead" aria-label="Introduction">
+      <h1>Real seats. Real<br class="mobile-break"> fans.</h1>
+      <p>Be there for the moments that matter.<br>Exceptional live experiences. A fair shot at<br class="desktop-break"> every seat.</p>
+    </section>
+    <section id="controls-bar" class="controls-bar" aria-label="Demo and city controls">
+      <div class="demo-label"><span>DEMO</span><small>Interactive ticketing demo</small></div>
+      <div class="city-control" role="group" aria-label="Choose city">
+        <button class="city-chip" data-city="Bengaluru">Bengaluru</button><button class="city-chip" data-city="Mumbai">Mumbai</button><button class="city-chip selected" data-city="All cities">All cities</button><select id="city-select" class="city-select" aria-label="More cities"><option value="">More cities</option></select>
+      </div>
+    </section>
+    <nav id="main-nav" class="main-nav" aria-label="Main sections">
+      <button class="nav-tab active" data-tab="discover">Discover</button><button class="nav-tab" data-tab="tickets">My tickets <span id="ticket-count" class="nav-count"></span></button><button class="nav-tab" data-tab="organizer">Organizer</button>
+    </nav>
+    <div id="banner" class="banner" role="status" aria-live="polite" hidden></div>
+    <section id="discover-view" class="view active" aria-label="Discover events">
+      <article id="feature" class="feature-card" tabindex="0" role="button" aria-label="Choose seats for After Hours Live">
+        <div class="feature-poster"><div class="feature-image"></div><div class="feature-shade"></div><span class="edition">EDITION 07 / NOV 2026</span><h2>AFTER HOURS /<br>LIVE.</h2><div class="feature-foot"><span>14 NOV 2026</span><span id="feature-city">BENGALURU</span></div></div>
+        <div class="feature-ticket"><div class="ticket-pitch">Your next<br><span>I was there.</span></div><div class="ticket-date"><strong>14</strong><span>NOV 2026</span></div><div id="feature-price" class="feature-price">₹1,499</div><div class="barcode" aria-hidden="true"></div><button class="primary-cta" id="feature-book">Choose seats</button></div>
+      </article>
+      <div class="rules-strip"><span><i></i>4 seats max</span><span><i></i>2–5 min seat hold</span><span><i></i>No hidden rules</span><button id="policy-open" class="policy-link">Fairness policy <small>(demo)</small></button></div>
+      <section class="event-section" aria-label="Events">
+        <header class="section-title"><h2>Find your next moment.</h2><span id="event-count">3 events</span></header>
+        <div class="filter-toolbar"><label class="search-field"><span class="sr-only">Search title or vibe</span><input id="search" type="search" placeholder="Search events, venues, or cities"></label><div class="category-filter" role="group" aria-label="Filter by category"><button class="category-chip active" data-category="All">All</button><button class="category-chip" data-category="Music">Music</button><button class="category-chip" data-category="Culture">Culture</button><button class="category-chip" data-category="Comedy">Comedy</button></div></div>
+        <div id="event-grid" class="event-grid" aria-live="polite"><div class="loading">Finding your next moment…</div></div>
+      </section>
+    </section>
+    <section id="tickets-view" class="view secondary-view" aria-label="My tickets" hidden></section>
+    <section id="organizer-view" class="view secondary-view" aria-label="Organizer dashboard" hidden></section>
+    <section id="checkout-view" class="view checkout-view" aria-label="Secure demo checkout" hidden></section>
+    <footer id="site-footer" class="site-footer"><button id="footer-policy" class="footer-policy">Fairness policy (demo)</button><div class="footer-rule"></div><h2>Made for the moment. Not the bots.</h2><p>Interactive demo. Seat holds are enforced by this demo server and expire automatically; payment is simulated and no card data is collected. Demo data can reset when the server restarts.</p><span class="footer-mark">SEATLOCK® &nbsp; / &nbsp; LIVE, FAIRLY.</span></footer>
+  </main>
+  <div id="modal-root" class="modal-root" aria-live="assertive"></div>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="/app.js"></script>
+</body>
+</html>
